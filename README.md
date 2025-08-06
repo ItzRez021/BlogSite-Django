@@ -1,20 +1,25 @@
-BlogSite - Django Blog Platform
-This is a fully-featured Django-based blogging platform with a clean and modular architecture. The project supports modern blogging features with a user-friendly interface.
+# BlogSite - Django Blog Platform
+This is a **fully-featured Django-based blogging platform** with a clean and modular architecture. The project supports modern blogging features with a user-friendly interface.
 
-Features
+---
+
+#Features
 -Easy post creation and editing
 
--Category and tag support
+-**Category and tag support
 
--Commenting system
+-**Commenting system
 
--Search functionality
+-**Search functionality
 
--Responsive front-end design
+-**Responsive front-end design
 
 -Clean and modular Django structure
 
-Security Notice
+---
+
+# Security Notice
+
 For security reasons:
 
 -The SECRET_KEY and database credentials are not included in the public repository.
