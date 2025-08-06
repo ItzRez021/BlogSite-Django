@@ -40,21 +40,22 @@ It is recommended to create a Python virtual environment before running the proj
 Steps to create and activate a virtual environment:
 
 1.Open your terminal or command prompt.
-
-2. Navigate to your project directory :
+2. Navigate to your project directory:
  cd /path/to/your/project
  
-3. Create a virtual environment named venv (you can name it anything) :
+3. Create a virtual environment named venv (you can name it anything):
   python -m venv venv
 
-4. Activate the virtual environment :
-  On Windows : venv\Scripts\activate
-  On macOS/Linux : source venv/bin/activate
+4. Activate the virtual environment:
+  On Windows: venv\Scripts\activate
+  On macOS/Linux: source venv/bin/activate
 
-5. Install the required packages (usually listed in requirements.txt) :
+5. Install the required packages (usually listed in requirements.txt):
 6.   pip install -r requirements.txt
 
 6. Now you can run your Django project commands inside this isolated environment.
+
+
 
 
 
