@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Project's{% endblock %}
+{% block css %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap">
+  <link rel="stylesheet" href="{% static 'home/css/all.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+{% endblock %}
+{% block body %}
+  <main class="projects">
+    <h1 class="projects__title">PROJECTS</h1>
+    <h2 class="projects__subtitle">List Project</h2>
+    <div class="projects__row">
+      <div class="projects__card">
+        <img src="{{MU}}blogpics/75c3d2ef13e18081fd0c090cf1fb12ed_E3utiqt.jpg" alt="">
+        <div class="projects__info">
+          <div class="projects__name">User Experience Design Dashboard Hotel Management</div>
+          <div class="projects__desc">A comprehensive dashboard for managing hotel UX metrics and KPIs, visualizing data in real time.</div>
+          <div class="projects__tags">
+            <span class="projects__tag projects__tag--blue">Design</span>
+            <span class="projects__tag projects__tag--purple">Dashboard</span>
+            <span class="projects__tag projects__tag--gray">UX</span>
+          </div>
+        </div>
+      </div>
+      <div class="projects__card">
+        <img src="{{MU}}/blogpics/03fc9c416415581afe6c872ccd4b4a76_TEeSUkF.jpg" alt="">
+        <div class="projects__info">
+          <div class="projects__name">Bring of User Experience Design to Policy Making: How to Impact Society</div>
+          <div class="projects__desc">A social initiative to introduce UX thinking in public policy processes. Featured at multiple events.</div>
+          <div class="projects__tags">
+            <span class="projects__tag projects__tag--blue">Social</span>
+            <span class="projects__tag projects__tag--gray">Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="projects__card projects__card--wide">
+      <img src="{{MU}}blogpics/3fc4b80a192be89627d64ca2f2686a10.jpg" alt="">
+      <div class="projects__info">
+        <div class="projects__name">UK review presentations<br>Bringing Design Process to Teams, How to Solve User Problems with Data & Inclusive Collaboration Designers</div>
+        <div class="projects__desc">Interactive workshop and presentations delivered for companies in the UK, focusing on inclusive, data-driven design thinking.</div>
+        <div class="projects__tags">
+          <span class="projects__tag projects__tag--blue">Design</span>
+          <span class="projects__tag projects__tag--pink">Presentation</span>
+          <span class="projects__tag projects__tag--gray">Collaboration</span>
+        </div>
+      </div>
+    </div>
+    <div class="projects__row">
+      <div class="projects__card">
+        <img src="{{MU}}blogpics/9182a9ebde956b54c405651791564fa0_97TeN07.jpg" alt="">
+        <div class="projects__info">
+          <div class="projects__name">Icon Package of Skin Icon</div>
+          <div class="projects__desc">A modern icon pack designed for health & beauty apps, featuring a consistent minimal style.</div>
+          <div class="projects__tags">
+            <span class="projects__tag projects__tag--gray">UI</span>
+            <span class="projects__tag projects__tag--gray">Icons</span>
+          </div>
+        </div>
+      </div>
+      <div class="projects__card">
+        <img src="{{MU}}blogpics/98e9a811b928e4140e434de8b82530f9_twlKWpi.jpg" alt="">
+        <div class="projects__info">
+          <div class="projects__name">UX review presentations</div>
+          <div class="projects__desc">How do you create compelling presentations that wow your colleagues and impress your managers?</div>
+          <div class="projects__tags">
+            <span class="projects__tag projects__tag--blue">Design</span>
+            <span class="projects__tag projects__tag--purple">Research</span>
+            <span class="projects__tag projects__tag--pink">Presentation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+{% endblock %}

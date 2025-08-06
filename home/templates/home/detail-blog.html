@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}صفحه {{blg.title}}{% endblock %}
+{% block css %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <link rel="stylesheet" href="{% static 'home/css/all.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+{% endblock %}
+{% block body %}
+  <div class="blog-detail-layout">
+
+    <aside class="blog-sidebar">
+      <div class="blog-sidebar__header">
+        <span>Recent posts</span>
+      </div>
+      <ul class="blog-sidebar__list">
+        <li class="blog-sidebar__item blog-sidebar__item--active">
+          <img src="{{blg.picture.url}}" alt="">
+          <div>
+            <div class="blog-sidebar__title">{{blg.title}}</div>
+            <div class="blog-sidebar__meta">{{uploaded_at_shamsi}}</div>
+          </div>
+        </li>
+        {% for b in blog %}
+        <a href="{% url 'home:blog-detail' b.pk %}" style="text-decoration: none;" class="blog-sidebar__item">
+          <img src="{{b.picture.url}}" alt="">
+          <div>
+            <div class="blog-sidebar__title">{{b.title}}</div>
+            <div class="blog-sidebar__meta">{{uploaded_at_shamsi}}</div>
+          </div>
+        </a>
+        {% endfor %}
+   
+      </ul>
+    </aside>
+
+    <main class="blog-detail-main">
+      <div class="blog-detail-header">
+        <h1 class="blog-detail-title">{{blg.title}}</h1>
+        <div class="blog-detail-meta">
+          <span>{{uploaded_at_shamsi}}</span>
+          <span class="blog-detail-tag blog-detail-tag--blue">Design</span>
+          <span class="blog-detail-tag blog-detail-tag--pink">Interface</span>
+        </div>
+        <img src="{{blg.picture.url}}" alt="" class="blog-detail-header__img">
+      </div>
+      <div class="blog-detail-content">
+        <p>
+          {{blg.text_1}}
+        </p>
+
+        {% if blg.tabletitle %}
+        <table class="blog-detail-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Temperature</th>
+              <th>CO₂ Levels</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2020</td>
+              <td>14.8°C</td>
+              <td>412 ppm</td>
+            </tr>
+            <tr>
+              <td>2025</td>
+              <td>15.2°C</td>
+              <td>417 ppm</td>
+            </tr>
+          </tbody>
+        </table>
+        {% endif %}
+   
+        <img src="{{blg.picture_2.url}}" class="blog-detail-image" alt="">
+    
+        <p>{{blg.text_2}}</p>
+        <h2>{{blg.note_title}}</h2>
+        <p>
+          <b>Accessibility:</b> Information should be readable and easy to understand.<br>
+          <b>Responsiveness:</b> All layouts must be mobile-friendly.<br>
+          <b>Impact:</b> Use clear color coding for risk levels.
+        </p>
+ 
+        <div class="blog-detail-gallery">
+          <img src="{{blg.mini_pic_1.url}}" alt="">
+          <img src="{{blg.mini_pic_2.url}}" alt="">
+          <img src="{{blg.mini_pic_3.url}}" alt="">
+        </div>
+        <h2>{{blg.final_note_title}}</h2>
+        <p>
+          {{blg.final_note_text}}
+        </p>
+      </div>
+
+      <div class="blog-detail-cta">
+        <span>Subscribe to newsletter</span>
+        <input type="email" placeholder="Your email">
+        <button>Subscribe</button>
+      </div>
+    </main>
+  </div>
+{% endblock %}

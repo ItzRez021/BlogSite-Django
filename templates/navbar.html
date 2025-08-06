@@ -1,0 +1,49 @@
+<!-- <<<<<<<<<<<mobile-nav>>>>>>>>>>> -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="closeMenuBtn">&times;</button>
+    <div class="mobile-menu__links">
+      <span class="mobile-menu__brand">Your Name</span>
+      <a href="{% url 'home:home' %}">Blog</a>
+      <a href="{% url 'home:projects' %}">Projects</a>
+      <a href="{% url 'home:about' %}">About</a>
+      <a href="{% url 'home:newsletter' %}">Newsletter</a>
+      <div class="mobile-menu__darkmode">
+        <label class="switch">
+          <input type="checkbox" class="switch__input">
+          <span class="switch__slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="navbar__container">
+      <span class="navbar__brand">Your Name</span>
+      <nav class="navbar__nav">
+        <ul class="navbar__nav-list">
+        <li class="navbar__nav-item {% if request.path == '/' %}navbar__nav-item--active{% endif %}">
+          <a href="{% url 'home:home' %}">Blog</a>
+        </li>
+        <li class="navbar__nav-item {% if request.path == '/projects/' %}navbar__nav-item--active{% endif %}">
+          <a href="{% url 'home:projects' %}">Projects</a>
+        </li>
+        <li class="navbar__nav-item {% if request.path == '/about/' %}navbar__nav-item--active{% endif %}">
+          <a href="{% url 'home:about' %}">About</a>
+        </li>
+        <li class="navbar__nav-item {% if request.path == '/newsletter/' %}navbar__nav-item--active{% endif %}">
+          <a href="{% url 'home:newsletter' %}">Newsletter</a>
+        </li>
+        </ul>
+      </nav>
+      <div class="navbar__right">
+        <label class="switch">
+          <input type="checkbox" class="switch__input">
+          <span class="switch__slider"></span>
+        </label>
+      </div>
+      <button class="navbar__burger" id="openMenuBtn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__border"></div>
+  </header>

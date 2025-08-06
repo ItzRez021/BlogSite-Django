@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blog - Detail Blog</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <link rel="stylesheet" href="style/all.css">
+</head>
+<body>
+  <div class="blog-detail-layout">
+    <!-- Sidebar (آخرین پست‌ها) -->
+    <aside class="blog-sidebar">
+      <div class="blog-sidebar__header">
+        <span>Recent posts</span>
+      </div>
+      <ul class="blog-sidebar__list">
+        <li class="blog-sidebar__item blog-sidebar__item--active">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca" alt="">
+          <div>
+            <div class="blog-sidebar__title">Climate Endgame: Exploring catastrophic climate change scenarios</div>
+            <div class="blog-sidebar__meta">Sunday, 1 Jan 2023</div>
+          </div>
+        </li>
+        <li class="blog-sidebar__item">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" alt="">
+          <div>
+            <div class="blog-sidebar__title">UX review presentations</div>
+            <div class="blog-sidebar__meta">Sunday, 1 Jan 2023</div>
+          </div>
+        </li>
+        <li class="blog-sidebar__item">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" alt="">
+          <div>
+            <div class="blog-sidebar__title">What is Wireframing?</div>
+            <div class="blog-sidebar__meta">Sunday, 1 Jan 2023</div>
+          </div>
+        </li>
+        <li class="blog-sidebar__item">
+          <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0" alt="">
+          <div>
+            <div class="blog-sidebar__title">Our top 10 Javascript frameworks to use</div>
+            <div class="blog-sidebar__meta">Sunday, 1 Jan 2023</div>
+          </div>
+        </li>
+        <!-- ... بقیه آخرین پست‌ها ... -->
+      </ul>
+    </aside>
+    <!-- Main Content -->
+    <main class="blog-detail-main">
+      <div class="blog-detail-header">
+        <h1 class="blog-detail-title">Climate Endgame: Exploring catastrophic climate change scenarios</h1>
+        <div class="blog-detail-meta">
+          <span>Sunday, 1 Jan 2023</span>
+          <span class="blog-detail-tag blog-detail-tag--blue">Design</span>
+          <span class="blog-detail-tag blog-detail-tag--pink">Interface</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca" alt="" class="blog-detail-header__img">
+      </div>
+      <div class="blog-detail-content">
+        <p>
+          The search for a design solution to manage occupant comfort and climate risk in buildings.  
+          In this article, we explore different scenarios and their impact on UX/UI design for sustainability.
+        </p>
+        <!-- مثال جدول -->
+        <table class="blog-detail-table">
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Temperature</th>
+              <th>CO₂ Levels</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2020</td>
+              <td>14.8°C</td>
+              <td>412 ppm</td>
+            </tr>
+            <tr>
+              <td>2025</td>
+              <td>15.2°C</td>
+              <td>417 ppm</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- مثال عکس یا نمودار -->
+        <img src="https://dummyimage.com/600x180/ffd984/333&text=Chart+Example" class="blog-detail-image" alt="">
+        <!-- مثال پاراگراف‌های بیشتر -->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque gravida volutpat augue, at euismod ipsum cursus ut.</p>
+        <h2>Design principles for climate awareness</h2>
+        <p>
+          <b>Accessibility:</b> Information should be readable and easy to understand.<br>
+          <b>Responsiveness:</b> All layouts must be mobile-friendly.<br>
+          <b>Impact:</b> Use clear color coding for risk levels.
+        </p>
+        <!-- مثال شبکه عکس یا نمودار دیگر -->
+        <div class="blog-detail-gallery">
+          <img src="https://dummyimage.com/150x120/ffd984/333&text=Graph" alt="">
+          <img src="https://dummyimage.com/150x120/ffeebe/333&text=Bar+Chart" alt="">
+          <img src="https://dummyimage.com/150x120/ffeebb/333&text=Pie+Chart" alt="">
+        </div>
+        <h2>Conclusion</h2>
+        <p>
+          By considering extreme scenarios, designers can create better solutions for real-world climate challenges.<br>
+          Stay tuned for more insights!
+        </p>
+      </div>
+      <!-- Call to Action / اشتراک در خبرنامه -->
+      <div class="blog-detail-cta">
+        <span>Subscribe to newsletter</span>
+        <input type="email" placeholder="Your email">
+        <button>Subscribe</button>
+      </div>
+    </main>
+  </div>
+  <!-- فوتر -->
+  <footer class="footer">
+    <div class="footer__container">
+      <span class="footer__copyright">
+        © 2023
+      </span>
+      <div class="footer__links">
+        <a href="#" class="footer__link">Twitter</a>
+        <a href="#" class="footer__link">LinkedIn</a>
+        <a href="#" class="footer__link">Email</a>
+        <a href="#" class="footer__link">RSS feed</a>
+        <a href="#" class="footer__link">Add to Feedly</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

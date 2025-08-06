@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Blog's{% endblock %}
+{% block css %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap">
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+{% endblock %}
+{% block body %}
+  <main>
+
+    <section class="hero-blog">
+      <div class="hero-blog__container">
+        <h1 class="hero-blog__title">THE BLOG</h1>
+      </div>
+    </section>
+
+    <section class="recent-posts">
+      <div class="recent-posts__container">
+        <h2 class="recent-posts__title">Recent blog posts</h2>
+        <div class="recent-posts__rows">
+          <div class="recent-posts__row recent-posts__row--top">
+          {% if blogs %}
+            <a href="{% url 'home:blog-detail' blogs.0.pk %}" style="text-decoration: none;" class="post-card post-card--big">
+              <img loading="lazy" src="{{ blogs.0.picture.url }}" class="post-card__img" alt="">
+              <div class="post-card__content">
+                <span class="post-card__date">{{ blogs_with_shamsi.0.shamsi_date }}</span>
+                <h3 class="post-card__title">
+                  {{ blogs.0.title }}
+                  <span class="post-card__external">&#8599;</span>
+                </h3>
+                <p class="post-card__desc">
+                  {{ blogs.0.text_1|truncatewords:15 }}
+                </p>
+                <div class="post-card__tags">
+                  <span class="post-card__tag post-card__tag--blue">Design</span>
+                  <span class="post-card__tag post-card__tag--purple">Research</span>
+                  <span class="post-card__tag post-card__tag--pink">Presentation</span>
+                </div>
+              </div>
+            </a>
+
+            <div class="recent-posts__col recent-posts__col--vertical">
+              <a class="post-card post-card--side" href="{% url 'home:blog-detail' blogs.1.pk %}" style="text-decoration: none;" >
+                <img loading="lazy" src="{{ blogs.1.picture.url }}" class="post-card__img" alt="">
+                <div class="post-card__content">
+                  <span class="post-card__date">{{ blogs_with_shamsi.1.shamsi_date }}</span>
+                  <h3 class="post-card__title">{{ blogs.1.title}}</h3>
+                  <p class="post-card__desc">
+                    {{ blogs.1.text_1|truncatewords:15}}
+                  </p>
+                  <div class="post-card__tags">
+                    <span class="post-card__tag post-card__tag--blue">Design</span>
+                    <span class="post-card__tag post-card__tag--purple">Research</span>
+                  </div>
+                </div>
+              </a>
+              <a class="post-card post-card--side" style="text-decoration: none;" href="{% url 'home:blog-detail' blogs.2.pk %}" >
+                <img loading="lazy" src="{{ blogs.2.picture.url }}" class="post-card__img" alt="">
+                <div class="post-card__content">
+                  <span class="post-card__date">{{ blogs_with_shamsi.2.shamsi_date }}</span>
+                  <h3 class="post-card__title">{{ blogs.2.title}}</h3>
+                  <p class="post-card__desc">
+                    {{ blogs.2.text_1|truncatewords:15}}
+                  </p>
+                  <div class="post-card__tags">
+                    <span class="post-card__tag post-card__tag--green">Design</span>
+                    <span class="post-card__tag post-card__tag--pink">Research</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="recent-posts__row recent-posts__row--bottom">
+            <a style="text-decoration: none;" href="{% url 'home:blog-detail' blogs.3.pk %}" class="post-card post-card--bottom">
+              <img loading="lazy" src="{{ blogs.3.picture.url }}" class="post-card__img" alt="">
+              <div class="post-card__content">
+                <span class="post-card__date">{{ blogs_with_shamsi.3.shamsi_date }}</span>
+                <h3 class="post-card__title">
+                  {{blogs.3.title}}
+                </h3>
+                <p class="post-card__desc">
+                  {{blogs.3.text_1|truncatewords:15}}
+                </p>
+                <div class="post-card__tags">
+                  <span class="post-card__tag post-card__tag--blue">Design</span>
+                  <span class="post-card__tag post-card__tag--pink">Interface</span>
+                </div>
+              </div>
+            </a>
+            
+            <a style="text-decoration: none;" href="{% url 'home:blog-detail' blogs.4.pk %}" class="post-card post-card--bottom">
+              <img loading="lazy" src="{{ blogs.4.picture.url }}" class="post-card__img" alt="">
+              <div class="post-card__content">
+                <span class="post-card__date">{{ blogs_with_shamsi.4.shamsi_date }}</span>
+                <h3 class="post-card__title">{{ blogs.4.title }}</h3>
+                <p class="post-card__desc">
+                  {{ blogs.4.text_1|truncatewords:15 }}
+                </p>
+                <div class="post-card__tags">
+                  <span class="post-card__tag post-card__tag--blue">Design</span>
+                  <span class="post-card__tag post-card__tag--pink">Interface</span>
+                </div>
+              </div>
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="all-posts">
+      <div class="all-posts__container">
+        <h2 class="all-posts__title">All blog posts</h2>
+        <div class="all-posts__grid">
+
+        {% if blogs_with_shamsi %}
+          {% for item in blogs_with_shamsi %}
+            <a href="{% url 'home:blog-detail' item.blog.pk %}" style="text-decoration: none;" class="post-card">
+              {% if item.blog.picture %}
+                <img loading="lazy" src="{{ item.blog.picture.url }}" class="post-card__img" alt="{{ item.blog.title }}">
+              {% else %}
+                <img loading="lazy" src="{% static 'images/default.jpg' %}" class="post-card__img" alt="Default image">
+              {% endif %}
+              <div class="post-card__content">
+                <span class="post-card__date">{{ item.shamsi_date }}</span>
+                <h3 class="post-card__title">{{ item.blog.title }}</h3>
+                <p class="post-card__desc">{{ item.blog.text_1|truncatewords:10 }}</p>
+                <div class="post-card__tags">
+                  <span class="post-card__tag post-card__tag--blue">Product</span>
+                  <span class="post-card__tag post-card__tag--purple">Frameworks</span>
+                </div>
+              </div>
+            </a>
+          {% endfor %}
+        {% endif %}
+
+        <!-- Pagination -->
+        <div class="pagination">
+          {% if page_obj.has_previous %}
+          <a href="?page={{ page_obj.previous_page_number }}" class="pagination__prev">Previous</a>
+          {% endif %}
+          <button class="pagination__num pagination__num--active">صفحه {{ page_obj.number }} از {{ page_obj.paginator.num_pages }}</button>
+          {% if page_obj.has_next %}
+          <a href="?page={{ page_obj.next_page_number }}" class="pagination__next">Next</a>
+          {% endif %}
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  
+  <script>
+
+    const openMenuBtn = document.getElementById('openMenuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+
+    let backdrop = document.createElement('div');
+    backdrop.className = 'mobile-menu-backdrop';
+    document.body.appendChild(backdrop);
+
+    openMenuBtn.onclick = function() {
+      mobileMenu.classList.add('active');
+      backdrop.classList.add('active');
+    }
+    closeMenuBtn.onclick = function() {
+      mobileMenu.classList.remove('active');
+      backdrop.classList.remove('active');
+    }
+    backdrop.onclick = function() {
+      mobileMenu.classList.remove('active');
+      backdrop.classList.remove('active');
+    }
+  </script>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us{% endblock %}
+{% block css %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap">
+  <link rel="stylesheet" href="{% static 'home/css/all.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+{% endblock %}
+{% block body %}
+  <div class="page-bg"></div>
+  <main class="about">
+    <h1 class="about__title">John Doe</h1>
+    <div class="about__img-box">
+      <img src="{{MU}}blogpics/webrah.png" alt="profile">
+    </div>
+    <div class="about__section">
+      <h2>About Us</h2>
+      <p>
+        At <strong>WEBRAH</strong>, we pride ourselves on having a talented and passionate team dedicated to delivering outstanding digital experiences. One of our key team members is a highly skilled and experienced <strong>UI designer</strong>, whose dedication and expertise bring exceptional value to every project we undertake.
+      </p>
+      <p>
+        Our designer brings a strong passion for crafting intuitive and engaging user experiences. With deep knowledge of design principles and tools, they work seamlessly with cross-functional teams to turn ideas into reality. Their designs are not only visually appealing but also functionally sound, always aimed at addressing the client’s needs. Constantly seeking growth, they are open to new challenges and opportunities that push their creative limits.
+      </p>
+    </div>
+
+    <div class="about__section">
+      <h2>Skills:</h2>
+      <ul>
+        <li>A rich portfolio showcasing extensive experience in UI design</li>
+        <li>Mastery of industry-standard tools such as Adobe Creative Suite and Figma</li>
+        <li>Advanced visual design skills with a strong grasp of color theory and typography</li>
+        <li>Effective problem-solving and communication abilities</li>
+        <li>Proven track record of managing multiple projects with cross-functional teams</li>
+        <li>A strong foundation in user research and data-driven design decision-making</li>
+        <li>Practical knowledge of front-end technologies: HTML, CSS, and JavaScript</li>
+      </ul>
+    </div>
+
+    <div class="about__section">
+      <h2>Experience:</h2>
+      <ul>
+        <li>5+ years of experience as a UI designer, working on a variety of projects for clients in the tech and retail industries</li>
+        <li>Developed a hotel management dashboard, boosting sales by <strong>20%</strong></li>
+        <li>Revamped a social initiative website, resulting in a <strong>50%</strong> increase in event signups</li>
+        <li>Enhanced collaboration and usability testing by redesigning an attendance platform, leading to a <strong>15%</strong> traffic growth</li>
+      </ul>
+    </div>
+
+    <div class="about__section">
+      <h2>Education:</h2>
+      <ul>
+        <li>Bachelor’s Degree in Graphic Design</li>
+        <li>Certified User Experience Designer (CUED)</li>
+      </ul>
+    </div>
+  </main>
+{% endblock %}

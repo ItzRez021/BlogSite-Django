@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Newsletter</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap">
+  <link rel="stylesheet" href="style/all.css">
+</head>
+<body>
+  <div class="page-bg"></div>
+  <header class="navbar">
+    <div class="navbar__container">
+      <span class="navbar__brand">Your Name</span>
+      <nav class="navbar__nav">
+        <ul class="navbar__nav-list">
+          <li class="navbar__nav-item"><a href="#">Blog</a></li>
+          <li class="navbar__nav-item"><a href="#">Projects</a></li>
+          <li class="navbar__nav-item"><a href="#">About</a></li>
+          <li class="navbar__nav-item navbar__nav-item--active"><a href="#">Newsletter</a></li>
+        </ul>
+      </nav>
+      <div class="navbar__right">
+        <label class="switch">
+          <input type="checkbox" class="switch__input">
+          <span class="switch__slider"></span>
+        </label>
+      </div>
+    </div>
+  </header>
+  <main class="newsletter">
+    <div class="newsletter__header">
+      <div class="newsletter__category">Newsletters</div>
+      <h1 class="newsletter__title">Stories and interviews</h1>
+      <div class="newsletter__desc">
+        Subscribe to learn about new product features, the latest in technology, <br>
+        solutions, and updates.
+      </div>
+      <form class="newsletter__form">
+        <input type="email" placeholder="Enter your email" class="newsletter__input">
+        <button class="newsletter__btn">Subscribe</button>
+      </form>
+      <div class="newsletter__info">We care about your data in our privacy policy.</div>
+    </div>
+    <section class="newsletter__blog">
+      <h2 class="newsletter__blog-title">All blog posts</h2>
+      <div class="newsletter__blog-list">
+        <div class="post-card">
+          <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9" class="post-card__img" alt="">
+          <div class="post-card__content">
+            <span class="post-card__date">Sunday, 1 Jan 2023</span>
+            <h3 class="post-card__title">Bill Walsh leadership lessons</h3>
+            <div class="post-card__tags">
+              <span class="post-card__tag post-card__tag--gray">Leadership</span>
+              <span class="post-card__tag post-card__tag--gray">Management</span>
+              <span class="post-card__tag post-card__tag--blue">Product</span>
+            </div>
+          </div>
+        </div>
+        <div class="post-card">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" class="post-card__img" alt="">
+          <div class="post-card__content">
+            <span class="post-card__date">Sunday, 1 Jan 2023</span>
+            <h3 class="post-card__title">PM mental models</h3>
+            <div class="post-card__tags">
+              <span class="post-card__tag post-card__tag--blue">Product</span>
+              <span class="post-card__tag post-card__tag--purple">Frameworks</span>
+            </div>
+          </div>
+        </div>
+        <div class="post-card">
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" class="post-card__img" alt="">
+          <div class="post-card__content">
+            <span class="post-card__date">Sunday, 1 Jan 2023</span>
+            <h3 class="post-card__title">What is Wireframing?</h3>
+            <div class="post-card__tags">
+              <span class="post-card__tag post-card__tag--blue">Design</span>
+              <span class="post-card__tag post-card__tag--gray">Process</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <span class="footer__copyright">© 2023</span>
+      <div class="footer__links">
+        <a href="#" class="footer__link">Twitter</a>
+        <a href="#" class="footer__link">LinkedIn</a>
+        <a href="#" class="footer__link">Email</a>
+        <a href="#" class="footer__link">RSS feed</a>
+        <a href="#" class="footer__link">Add to Feedly</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

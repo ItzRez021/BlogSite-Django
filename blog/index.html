@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>THE BLOG</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<!-- <<<<<<<<<<<mobile-nav>>>>>>>>>>> -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="closeMenuBtn">&times;</button>
+    <div class="mobile-menu__links">
+      <span class="mobile-menu__brand">Your Name</span>
+      <a href="index.html">Blog</a>
+      <a href="project.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="newsletter.html">Newsletter</a>
+      <div class="mobile-menu__darkmode">
+        <label class="switch">
+          <input type="checkbox" class="switch__input">
+          <span class="switch__slider"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <!-- Header -->
+  <header class="navbar">
+    <div class="navbar__container">
+      <span class="navbar__brand">Your Name</span>
+      <nav class="navbar__nav">
+        <ul class="navbar__nav-list">
+          <li class="navbar__nav-item"><a href="index.html">Blog</a></li>
+          <li class="navbar__nav-item"><a href="project.html">Projects</a></li>
+          <li class="navbar__nav-item"><a href="about.html">About</a></li>
+          <li class="navbar__nav-item"><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+      </nav>
+      <div class="navbar__right">
+        <label class="switch">
+          <input type="checkbox" class="switch__input">
+          <span class="switch__slider"></span>
+        </label>
+      </div>
+      <button class="navbar__burger" id="openMenuBtn">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="navbar__border"></div>
+  </header>
+  <main>
+    <!-- Blog Title -->
+    <section class="hero-blog">
+      <div class="hero-blog__container">
+        <h1 class="hero-blog__title">THE BLOG</h1>
+      </div>
+    </section>
+    <!-- Recent Blog Posts -->
+    <section class="recent-posts">
+      <div class="recent-posts__container">
+        <h2 class="recent-posts__title">Recent blog posts</h2>
+        <div class="recent-posts__rows">
+        
+          <div class="recent-posts__row recent-posts__row--top">
+            <div class="post-card post-card--big">
+              <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" class="post-card__img" alt="">
+              <div class="post-card__content">
+                <span class="post-card__date">Sunday, 1 Jan 2023</span>
+                <h3 class="post-card__title">
+                  UX review presentations
+                  <span class="post-card__external">&#8599;</span>
+                </h3>
+                <p class="post-card__desc">
+                  How do you create compelling presentations that wow your colleagues and impress your managers?
+                </p>
+                <div class="post-card__tags">
+                  <span class="post-card__tag post-card__tag--blue">Design</span>
+                  <span class="post-card__tag post-card__tag--purple">Research</span>
+                  <span class="post-card__tag post-card__tag--pink">Presentation</span>
+                </div>
+              </div>
+            </div>
+            <div class="recent-posts__col recent-posts__col--vertical">
+              <div class="post-card post-card--side">
+                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" class="post-card__img" alt="">
+                <div class="post-card__content">
+                  <span class="post-card__date">Sunday, 1 Jan 2023</span>
+                  <h3 class="post-card__title">Migrating to Linear 101</h3>
+                  <p class="post-card__desc">
+                    Linear helps streamline software projects, sprints, tasks, and bug tracking. Here’s how to get...
+                  </p>
+                  <div class="post-card__tags">
+                    <span class="post-card__tag post-card__tag--blue">Design</span>
+                    <span class="post-card__tag post-card__tag--purple">Research</span>
+                  </div>
+                </div>
+              </div>
+              <div class="post-card post-card--side">
+                <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0" class="post-card__img" alt="">
+                <div class="post-card__content">
+                  <span class="post-card__date">Sunday, 1 Jan 2023</span>
+                  <h3 class="post-card__title">Building your API Stack</h3>
+                  <p class="post-card__desc">
+                    The rise of RESTful APIs has been met by a rise in tools for creating, testing, and managing...
+                  </p>
+                  <div class="post-card__tags">
+                    <span class="post-card__tag post-card__tag--green">Design</span>
+                    <span class="post-card__tag post-card__tag--pink">Research</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- پایین: دو کارت -->
+          <div class="recent-posts__row recent-posts__row--bottom">
+            <div class="post-card post-card--bottom">
+              <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca" class="post-card__img" alt="">
+              <div class="post-card__content">
+                <span class="post-card__date">Sunday, 1 Jan 2023</span>
+                <h3 class="post-card__title">
+                  Climate Endgame: Exploring catastrophic climate change scenarios
+                </h3>
+                <p class="post-card__desc">
+                  The search for a design solution to manage occupant comfort and climate risk in buildings.
+                </p>
+                <div class="post-card__tags">
+                  <span class="post-card__tag post-card__tag--blue">Design</span>
+                  <span class="post-card__tag post-card__tag--pink">Interface</span>
+                </div>
+              </div>
+            </div>
+            <div class="post-card post-card--bottom">
+              <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" class="post-card__img" alt="">
+              <div class="post-card__content">
+                <span class="post-card__date">Sunday, 1 Jan 2023</span>
+                <h3 class="post-card__title">Grid system for better Design User Interface</h3>
+                <p class="post-card__desc">
+                  A grid system is a design tool used to arrange content on a webpage. It is a series of vertical and horizontal lines that create a matrix of intersecting points...
+                </p>
+                <div class="post-card__tags">
+                  <span class="post-card__tag post-card__tag--blue">Design</span>
+                  <span class="post-card__tag post-card__tag--pink">Interface</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- All blog posts -->
+    <section class="all-posts">
+      <div class="all-posts__container">
+        <h2 class="all-posts__title">All blog posts</h2>
+        <div class="all-posts__grid">
+          <div class="post-card">
+            <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9" class="post-card__img" alt="">
+            <div class="post-card__content">
+              <span class="post-card__date">Sunday, 1 Jan 2023</span>
+              <h3 class="post-card__title">Bill Walsh leadership lessons</h3>
+              <p class="post-card__desc">
+                Lessons from the legendary San Francisco 49ers coach on building a culture of excellence.
+              </p>
+              <div class="post-card__tags">
+                <span class="post-card__tag post-card__tag--gray">Leadership</span>
+                <span class="post-card__tag post-card__tag--gray">Management</span>
+                <span class="post-card__tag post-card__tag--blue">Product</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308" class="post-card__img" alt="">
+            <div class="post-card__content">
+              <span class="post-card__date">Sunday, 1 Jan 2023</span>
+              <h3 class="post-card__title">PM mental models</h3>
+              <p class="post-card__desc">
+                Explore how product managers use mental models to guide their teams and products to success.
+              </p>
+              <div class="post-card__tags">
+                <span class="post-card__tag post-card__tag--blue">Product</span>
+                <span class="post-card__tag post-card__tag--purple">Frameworks</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2" class="post-card__img" alt="">
+            <div class="post-card__content">
+              <span class="post-card__date">Sunday, 1 Jan 2023</span>
+              <h3 class="post-card__title">What is Wireframing?</h3>
+              <p class="post-card__desc">
+                Learn what a wireframe is, why it matters, and how to create effective wireframes for your projects.
+              </p>
+              <div class="post-card__tags">
+                <span class="post-card__tag post-card__tag--blue">Design</span>
+                <span class="post-card__tag post-card__tag--gray">Process</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" class="post-card__img" alt="">
+            <div class="post-card__content">
+              <span class="post-card__date">Sunday, 1 Jan 2023</span>
+              <h3 class="post-card__title">How collaboration makes us better designers</h3>
+              <p class="post-card__desc">
+                Discover the benefits of collaboration in design and how it can make your work stronger and more impactful.
+              </p>
+              <div class="post-card__tags">
+                <span class="post-card__tag post-card__tag--blue">Design</span>
+                <span class="post-card__tag post-card__tag--gray">Collaboration</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0" class="post-card__img" alt="">
+            <div class="post-card__content">
+              <span class="post-card__date">Sunday, 1 Jan 2023</span>
+              <h3 class="post-card__title">Our top 10 Javascript frameworks to use</h3>
+              <p class="post-card__desc">
+                A roundup of the top Javascript frameworks you should consider for your next project.
+              </p>
+              <div class="post-card__tags">
+                <span class="post-card__tag post-card__tag--gray">Software Development</span>
+                <span class="post-card__tag post-card__tag--blue">Javascript</span>
+              </div>
+            </div>
+          </div>
+          <div class="post-card">
+            <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca" class="post-card__img" alt="">
+            <div class="post-card__content">
+              <span class="post-card__date">Sunday, 1 Jan 2023</span>
+              <h3 class="post-card__title">Podcast: Creating a better CX Community</h3>
+              <p class="post-card__desc">
+                Listen to experts discuss best practices and strategies for building a thriving CX community.
+              </p>
+              <div class="post-card__tags">
+                <span class="post-card__tag post-card__tag--blue">Customer Success</span>
+                <span class="post-card__tag post-card__tag--purple">Design</span>
+                <span class="post-card__tag post-card__tag--pink">Research</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Pagination -->
+        <div class="pagination">
+          <button class="pagination__prev">Previous</button>
+          <button class="pagination__num pagination__num--active">1</button>
+          <button class="pagination__num">2</button>
+          <button class="pagination__num">3</button>
+          <span class="pagination__dots">...</span>
+          <button class="pagination__num">10</button>
+          <button class="pagination__next">Next</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <span class="footer__copyright">
+        © 2023
+      </span>
+      <div class="footer__links">
+        <a href="#" class="footer__link">Twitter</a>
+        <a href="#" class="footer__link">LinkedIn</a>
+        <a href="#" class="footer__link">Email</a>
+        <a href="#" class="footer__link">RSS feed</a>
+        <a href="#" class="footer__link">Add to Feedly</a>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+
+    const openMenuBtn = document.getElementById('openMenuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+
+    let backdrop = document.createElement('div');
+    backdrop.className = 'mobile-menu-backdrop';
+    document.body.appendChild(backdrop);
+
+    openMenuBtn.onclick = function() {
+      mobileMenu.classList.add('active');
+      backdrop.classList.add('active');
+    }
+    closeMenuBtn.onclick = function() {
+      mobileMenu.classList.remove('active');
+      backdrop.classList.remove('active');
+    }
+    backdrop.onclick = function() {
+      mobileMenu.classList.remove('active');
+      backdrop.classList.remove('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}News Letter{% endblock %}
+{% block css %}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap">
+  <link rel="stylesheet" href="{% static 'home/css/all.css' %}">
+  <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+{% endblock %}
+{% block body %}
+  <div class="page-bg"></div>
+  <main class="newsletter">
+    <div class="newsletter__header">
+      <div class="newsletter__category">Newsletters</div>
+      <h1 class="newsletter__title">Stories and interviews</h1>
+      <div class="newsletter__desc">
+        Subscribe to learn about new product features, the latest in technology, <br>
+        solutions, and updates.
+      </div>
+      <form class="newsletter__form">
+        <input type="email" placeholder="Enter your email" class="newsletter__input">
+        <button class="newsletter__btn">Subscribe</button>
+      </form>
+      <div class="newsletter__info">We care about your data in our privacy policy.</div>
+    </div>
+    <section class="newsletter__blog">
+      <h2 class="newsletter__blog-title">All blog posts</h2>
+      <div class="newsletter__blog-list">
+        {% if blg %}
+        {% for b in blg %}
+        <a class="post-card" style="text-decoration: none;" href="{% url 'home:blog-detail' b.blog.pk %}">
+          <img src="{{b.blog.picture.url}}" class="post-card__img" alt="">
+          <div class="post-card__content">
+            <span class="post-card__date">{{ b.blog.shamsi_date }}</span>
+            <h3 class="post-card__title">{{b.blog.title}}</h3>
+            <div class="post-card__tags">
+              <span class="post-card__tag post-card__tag--blue">Product</span>
+            </div>
+          </div>
+        </a>
+        {% endfor %}
+        {% endif %}
+      </div>
+    </section>
+  </main>
+{% endblock %}
