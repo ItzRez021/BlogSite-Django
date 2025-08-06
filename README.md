@@ -4,17 +4,17 @@ This is a **fully-featured Django-based blogging platform** with a clean and mod
 ---
 
 #Features
--Easy post creation and editing
+- Easy post creation and editing
 
--**Category and tag support
+- **Category and tag support**
 
--**Commenting system
+- **Commenting system**
 
--**Search functionality
+- **Search functionality**
 
--**Responsive front-end design
+- **Responsive front-end design
 
--Clean and modular Django structure
+- Clean and modular Django structure
 
 ---
 
@@ -22,9 +22,9 @@ This is a **fully-featured Django-based blogging platform** with a clean and mod
 
 For security reasons:
 
--The SECRET_KEY and database credentials are not included in the public repository.
+- The SECRET_KEY and database credentials are not included in the public repository.
 
--However, a default database connection structure is provided in settings.py as a placeholder, so you can easily configure your local or production database.
+- However, a default database connection structure is provided in settings.py as a placeholder, so you can easily configure your local or production database.
 
 ---
 
