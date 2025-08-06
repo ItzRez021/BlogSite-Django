@@ -1,33 +1,31 @@
-# Podeman - Django Online Shop
+BlogSite - Django Blog Platform
+This is a fully-featured Django-based blogging platform with a clean and modular architecture. The project supports modern blogging features with a user-friendly interface.
 
-This is a **fully-featured Django-based online shopping platform** with a modern and clean architecture. The project is built with **Persian (Farsi)** support, including a fully translated admin panel and front-end content.
+Features
+-Easy post creation and editing
 
----
+-Category and tag support
 
-# Features
+-Commenting system
 
-- Fully translated **Persian admin panel**
-- Front-end in **Persian (Farsi)**
-- **Shopping Cart** system
-- **Wishlist** functionality
-- **Product search**
-- **Product rating system**
-- Clean and modular Django structure
+-Search functionality
 
----
+-Responsive front-end design
 
-# Security Notice
+-Clean and modular Django structure
 
+Security Notice
 For security reasons:
 
-- The `SECRET_KEY` and **database credentials** are not shared in the public repository.
-- However, **default database connection structure** is included in `settings.py` as a placeholder so you can easily configure your local or production database.
+-The SECRET_KEY and database credentials are not included in the public repository.
+
+-However, a default database connection structure is provided in settings.py as a placeholder, so you can easily configure your local or production database.
 
 ---
 
 # Media Uploads
 
-To upload images (e.g., product photos), place your files inside the 'media/(path)/ directory:
+To upload images (e.g., product photos), place your files inside the 'media/blogpics/ directory:
 
 
 Creating Virtual Environment
