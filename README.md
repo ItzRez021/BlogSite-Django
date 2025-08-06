@@ -3,7 +3,8 @@ This is a **fully-featured Django-based blogging platform** with a clean and mod
 
 ---
 
-#Features
+# Features
+
 - Easy post creation and editing
 
 - **Category and tag support**
@@ -12,7 +13,7 @@ This is a **fully-featured Django-based blogging platform** with a clean and mod
 
 - **Search functionality**
 
-- **Responsive front-end design
+- **Responsive front-end design**
 
 - Clean and modular Django structure
 
